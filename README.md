@@ -1,68 +1,47 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center">
+  Go Stack - Desafio 5: Primeiro projeto com ReactJS
+</h3>
 
-## Available Scripts
+<h1 align="center">
+  <img alt="Print0" title="Print0" src=".github/print0.jpg" width="600px" />
+</h1>
 
-In the project directory, you can run:
 
-### `yarn start`
+### Funcionalidades
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Aplicação que busca na API de repósitorio do Github, como nome e issues assim listando todas os repositorios adicionados no input.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `yarn test`
+#### Funções adicionadas
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+#### 1. Captando erros
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Adicionado um `try/catch` por volta do código presente na função `handleSubmit` presente no componente `Main` e caso um repositório não seja encontrado na API do Github adicione uma borda vermelha por volta do input em que o usuário digitou o nome do repositório.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+#### 2. Repositório duplicado
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Antes de fazer a chamada à API na função `handleSubmit` é feita verificação para ver se o repositório não está duplicado, ou seja, se ele ainda não existe no estado de `repositories`.
 
-### `yarn eject`
+Caso exista, disparado um erro, e com isso o código cairá no `catch` do `try/catch` criado na funcionalidade anterior.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### 3. Filtro de estado
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Filtro de estado na listagem de Issues no detalhe do repositório. O estado representa se a issue está em aberto, fechada ou uma opção para exibir todas.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### 4. Paginação
 
-## Learn More
+Adicionada paginação nas issues listadas no detalhe do repositório.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Adicionados botões de próxima página e página anterior. O botão de página anterior fica desativado na primeira página.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### 5. Prints
 
-### Code Splitting
+<h1 align="center">
+  <img alt="Print1" title="Print1" src=".github/print1.jpg" width="2000px" />
+</h1>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<h1 align="center">
+  <img alt="Print2" title="Print2" src=".github/print2.jpg" width="2000px" />
+</h1>

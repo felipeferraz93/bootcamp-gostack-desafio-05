@@ -9,12 +9,14 @@ export const Form = styled.form`
 
   input {
     flex: 1;
-    border: 1px solid #eee;
+    border: 1px solid ${props => (props.error ?' #FF0000': '#eee')};
     padding: 10px 15px;
     border-radius: 4px;
     font-size: 16px;
     margin-top: 10px;
   }
+
+
 `;
 
 const rotate = keyframes`
@@ -29,7 +31,7 @@ const rotate = keyframes`
 
 export const SubmitButton = styled.button.attrs(props => ({
   type: 'submit',
-  disbled: props.loading,
+  disabled: props.loading,
 }))`
   background: #7159c1;
   border: 0;
@@ -75,4 +77,14 @@ export const List = styled.ul`
       text-decoration: none;
     }
   }
+`;
+
+export const ErrorMessage = styled.p`
+
+p{
+    margin: 0 auto;
+    color: #ff0000;
+    margin: 10px;
+  }
+
 `;
